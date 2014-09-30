@@ -89,11 +89,7 @@ class Caixa extends BoletoAbstract
      */
     public function setConta($conta)
     {
-        if (strlen($conta) === 7) {
-            $this->conta = self::zeroFill($conta, 7);
-        } else {
-            $this->conta = self::zeroFill($conta, 6);
-        }
+        $this->conta = $conta;
 
         return $this;
     }
